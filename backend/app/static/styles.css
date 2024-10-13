@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* CSS for reminders container */
+.reminder-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* CSS for day header */
+.day-header {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* CSS for individual reminders */
+.reminder-item {
+    margin-bottom: 5px;
+}
+
+
+
+/* Add your CSS styles for the note detail page */
+.note-detail {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.note-detail h2 {
+    font-size: 24px;
+}
+
+.note-detail p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}

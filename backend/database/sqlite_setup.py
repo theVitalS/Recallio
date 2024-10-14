@@ -1,15 +1,13 @@
 # database/db_setup.py
-from sqlalchemy import text
 
 from contextlib import contextmanager
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from database.models import Base
+from backend.database.models import Base
+from config import DATABASE_URL
 
 
 # Define your database connection details
-db_name = '/home/vital/LearNotik/LearNotik2/backend/database/database'
-DATABASE_URL = f"sqlite:///{db_name}.db"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
@@ -21,6 +19,14 @@ def get_db():
         yield db
     finally:
         db.close()
+
+
+def create_empty_database():
+    session = SessionLocal()
+    create_tables_from_models()
+    session.commit()
+
+    session.close()
 
 
 def create_tables_from_models():

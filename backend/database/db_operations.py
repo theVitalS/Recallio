@@ -1,4 +1,4 @@
-from database.models import Subject, Topic, Source
+from backend.database.models import Subject, Topic, Source
 
 
 def get_or_create(session, model, **kwargs):

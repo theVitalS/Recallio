@@ -3,15 +3,15 @@ from datetime import timedelta, datetime
 from flask import Flask, render_template, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-from database.models import Note, Reminder, local_timezone
-from database.sqlite_setup import get_db
-from database.db_operations import *
+from backend.database.models import Note, Reminder, local_timezone
+from backend.database.db_operations import *
+from config import DATABASE_URL
 
 #from google.cloud import speech_v1p1beta1 as speech
 
 app = Flask(__name__)
 CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/vital/LearNotik/LearNotik2/backend/database/database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL  #'sqlite:////home/vital/LearNotik/LearNotik2/backend/database/database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
